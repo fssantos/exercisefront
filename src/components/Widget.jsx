@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import { abbreviateNumber } from "../utils/numbers"
 import css from "../styles/widget.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -14,7 +15,7 @@ class Widget extends Component {
                     <FontAwesomeIcon icon={this.props.icon} className={css.icon} />
                 </div>
                 <div id="wrapper" className={css.wrapper}>
-                    <p className={css.text_value}>{this.props.value}</p>
+                    <p className={css.text_value}>{abbreviateNumber(this.props.value)}</p>
                     <p className={css.text_description}>{this.props.description}</p>
                 </div>
 
@@ -22,5 +23,4 @@ class Widget extends Component {
         )
     }
 }
-
 export default Widget;
