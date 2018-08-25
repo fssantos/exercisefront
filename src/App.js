@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Widgets from "./containers/Widgets";
+
 const App = () => {
   return (
-    <div>
-      <p>React hare!</p>
-    </div>
+    <Widgets />
   );
 };
 export default App;

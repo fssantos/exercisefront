@@ -1,10 +1,10 @@
 {
-  "name": "rrrwa-boilerplate",
+  "name": "exercisefront",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development ./src/index.js --output ./dist/main.js",
+    "start": "webpack-dev-server --port 3000 --mode development ./src/index.js --output ./dist/main.js",
     "build": "webpack --mode production ./src/index.js --output ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,8 +22,14 @@
     "mini-css-extract-plugin": "^0.4.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "style-loader": "^0.22.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-regular-svg-icons": "^5.2.0",
+    "@fortawesome/react-fontawesome": "^0.1.2"
   }
 }

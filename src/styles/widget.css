@@ -1,0 +1,120 @@
+.container {
+    --items-margin: 14px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
+    height: 80px;
+    margin: var(--items-margin);
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+
+}
+
+.text_value {
+    margin: 0;
+    margin-left: 20px;
+    color:#68666b;
+    font-size: 1.5em;
+}
+
+.text_description {
+    margin: 0;
+    margin-left: 20px;
+    color: rgb(174, 174, 189);
+}
+
+.icon_wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.icon {
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 40px;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-basis: calc(100% - calc(var(--items-margin) * 2));
+        flex-direction: column;
+        height: 150px;
+    }
+    .wrapper{
+        width: 100%;
+        align-items: center;
+    }
+    .icon_wrapper{
+        width: 100%;
+    }
+    .text_value {
+        margin-left: 0px;
+        font-size: 1.5em;
+    }
+    
+    .text_description {
+        margin-left: 0px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container {
+        flex-basis: calc(100% - calc(var(--items-margin) * 2));
+    }
+
+    .wrapper {
+        flex-grow: 2.5;
+    }
+
+} 
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+        .container {
+        flex-basis: calc(100% - calc(var(--items-margin) * 2));
+    }
+
+    .wrapper {
+        flex-grow: 2.5;
+    }
+
+}
+
+ /*TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+    .container {
+        flex-basis: calc(50% - calc(var(--items-margin) * 2));
+    }
+
+    .wrapper {
+        flex-grow: 2.5;
+    }
+
+
+} 
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1200px) {
+    .container {
+        flex-basis: calc(25% - calc(var(--items-margin) * 2));
+    }
+
+}
