@@ -21,6 +21,7 @@ function reducer(state = initialState, action) {
         case RECEIVE_WIDGETS:
             return {
                 ...state,
+                data: action.payload.data,
                 isFetching: false,
             }
         default: return {
