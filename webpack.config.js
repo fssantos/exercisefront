@@ -34,6 +34,7 @@ module.exports = {
                     },
                 ],
             },
+
         ]
     },
     plugins: [ //Plugin to read html files

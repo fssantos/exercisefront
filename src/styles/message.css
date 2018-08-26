@@ -1,0 +1,83 @@
+.container {
+    margin-top: 5px;
+    display:flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: center;
+    border-top:1px solid #f3f3f7;
+}
+
+.profile_picture {
+    display: flex;
+    align-self: flex-start;
+    flex-shrink: 0;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;   
+    overflow: hidden; 
+    background: #eee no-repeat center;
+    background-size: cover;
+    margin-top:25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.infos_and_message_wrapper {
+    display:flex;
+    flex-direction: column;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.infos_wrapper {
+    display:flex;
+    align-self: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.author {
+    margin: 0;
+    font-weight: bold;
+    color: #6f6f83;
+
+}
+
+.time{
+    margin: 0;
+    font-size: 10px;
+    font-weight: 800;
+    margin-left: 10px;
+    color: rgb(156, 156, 170);
+}
+
+.message {
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: rgb(174, 174, 189);    
+}
+
+
+
+
+
+
+
+/*makes scroll always visible*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(201, 198, 198, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(240, 232, 232, 0.5);
+  }
+
+
+

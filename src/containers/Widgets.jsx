@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Widget from "../components/Widget";
-
+import Loader from "react-loader-spinner";
 import { fetchWidgets } from "../actions/widgetActions";
 
 import css from "../styles/widgets_container.css";
@@ -16,7 +16,7 @@ const colors = {
 }
 
 
-class WidgetsContainer extends Component {
+class Widgets extends Component {
 
     componentDidMount() {
         this.props.fetchWidgets();
@@ -26,8 +26,18 @@ class WidgetsContainer extends Component {
     render() {
 
         const { newOrders, comments, newUsers, pageViews } = this.props.widgets
+        const { isFetching } = this.props
+
+        if (isFetching) {
+            return (
+                <div className={css.loader_wrapper}>
+                    <Loader type="Oval" color="#4B9C33" height={80} width={80} />
+                </div>)
+        }
+
         return (
-            <div id="widgets_container" className={css.container}>
+
+            < div id="widgets_container" className={css.container} >
                 <p id="header_text" className={css.header}>Dashboard</p>
                 <div id="widgets_wrapper" className={css.wrapper}>
                     <Widget
@@ -53,14 +63,15 @@ class WidgetsContainer extends Component {
                         icon={faNewspaper}
                         color={colors.red} />
                 </div>
-            </div>
+            </div >
         )
     }
 }
 
 const mapStateToProps = (state) => {
     return ({
-        widgets: state.widgetsReducer.data
+        widgets: state.widgetsReducer.data,
+        isFetching: state.widgetsReducer.isFetching,
     })
 }
 const mapDispatchToProps = (dispatch) => {
@@ -69,4 +80,4 @@ const mapDispatchToProps = (dispatch) => {
     })
 
 }
-export default connect(mapStateToProps, mapDispatchToProps)(WidgetsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(Widgets);

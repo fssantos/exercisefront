@@ -3,14 +3,23 @@ const apiUrl = "http://dev.4all.com:3050";
 
 
 const resource = {
-    widgets: "widgets"
+    widgets: "widgets",
+    chatMessages: "messages"
 }
 
 
 // Widgets 
-
 export const listWidgets = () =>
-    fetchList(resource.widgets).then(response => response.json());
+    fetchList(resource.widgets).then(response => response.json())
+
+
+// Chat
+export const listChatMessages = () =>
+    fetchList(resource.chatMessages).then(response => response.json())
+
+export const createChatMessage = data =>
+    fetchCreate(resource.chatMessages, data).then(response => response.status)
+
 
 
 
@@ -22,4 +31,14 @@ const fetchList = resource =>
         },
         method: "GET"
     });
+
+const fetchCreate = (resource, data) =>
+    fetch(`${apiUrl}/${resource}/`, {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+    });
+
 

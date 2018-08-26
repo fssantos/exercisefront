@@ -5,7 +5,7 @@ import thunk from "redux-thunk";;
 
 
 function reduxStore(initialState) {
-    const middleware = [logger, thunk];
+    const middleware = [thunk, logger];
     const store = createStore(reducers,
         initialState,
         compose(
