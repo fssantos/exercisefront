@@ -4,7 +4,8 @@ const apiUrl = "http://dev.4all.com:3050";
 
 const resource = {
     widgets: "widgets",
-    chatMessages: "messages"
+    chatMessages: "messages",
+    pageViews: "pageViews",
 }
 
 
@@ -19,6 +20,13 @@ export const listChatMessages = () =>
 
 export const createChatMessage = data =>
     fetchCreate(resource.chatMessages, data).then(response => response.status)
+
+
+// Page Views
+export const listPageViews = () =>
+    fetchList(resource.pageViews).then(response => response.json())
+
+
 
 
 

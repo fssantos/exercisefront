@@ -32,6 +32,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-regular-svg-icons": "^5.2.0",
     "@fortawesome/react-fontawesome": "^0.1.2",
+    "chart.js": "^1.1.1",
+    "react-chartjs": "^1.2.0",
     "react-loader-spinner": "^2.1.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
