@@ -20,7 +20,7 @@ export const fetchWidgets = () => dispatch => {
     return listWidgets()
         .then(data => {
             if (typeof data.error == "undefined") {
-                setTimeout(() => { dispatch(receiveWidgets(data)); }, 5000)
+                setTimeout(() => { dispatch(receiveWidgets(data)); }, 2000)
 
             } else {
                 console.error(data.error);

@@ -21,7 +21,7 @@ export const fetchChatMessages = () => dispatch => {
     return listChatMessages()
         .then(data => {
             if (typeof data.error == "undefined") {
-                setTimeout(() => { dispatch(receiveChatMessages(data)); }, 5000)
+                setTimeout(() => { dispatch(receiveChatMessages(data)); }, 2000)
 
             } else {
                 console.error(data.error);

@@ -20,7 +20,7 @@ export const fetchPageViews = () => dispatch => {
     return listPageViews()
         .then(data => {
             if (typeof data.error == "undefined") {
-                setTimeout(() => { dispatch(receivePageViews(data)); }, 5000)
+                setTimeout(() => { dispatch(receivePageViews(data)); }, 2000)
 
             } else {
                 console.error(data.error);

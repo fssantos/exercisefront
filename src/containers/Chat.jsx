@@ -37,12 +37,17 @@ class Chat extends Component {
 
     render() {
         return (
+
+
             <div className={css.container}>
+
                 <div className={css.header}>
+
                     <FontAwesomeIcon icon={faComments} className={css.header_icon} />
                     <p className={css.header_text}>Chat</p>
                 </div>
                 <div className={css.messages_wrapper}>
+
                     {this.props.messages.map((message, index) => {
                         return (
                             <Message
@@ -52,11 +57,13 @@ class Chat extends Component {
                                 time={message.time}
                                 message={message.message}
                                 key={index}
-                            />)
+                            />
+                        )
                     })
                     }
-
                 </div>
+
+
                 <div className={css.bottom_wrapper}>
                     <input className={css.message_input}
                         onChange={this.handleOnChange}

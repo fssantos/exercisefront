@@ -13,7 +13,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 15px;
 }
 
@@ -42,7 +42,9 @@
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    border-top:1px solid #f3f3f7;
+    padding: 10px;
 }
 
 .message_input{
@@ -50,6 +52,9 @@
     flex-grow: 5;
     outline:none;
     border:0;
+    border:1px solid #f3f3f7;
+    margin-left: 10px; 
+    padding: 10px;
 }
 .message_input:focus{
     outline:none;
@@ -69,7 +74,11 @@
     margin-right: 4px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;  
+}
 
+.test {
+    width: 600;
+    height: 400;
 }
 
 
