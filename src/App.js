@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
-import Widgets from "./containers/Widgets";
-import Chat from "./containers/Chat";
-import PageViewsGraph from "./containers/PageViewsGraph";
+
 import configureStore from './stores';
+import Dashboard from "./components/Dashboard";
 
 
 const store = configureStore();
@@ -13,7 +12,7 @@ const store = configureStore();
 const App = () => {
   return (
     <Provider store={store}>
-      <PageViewsGraph />
+      <Dashboard />
     </Provider>
   );
 };

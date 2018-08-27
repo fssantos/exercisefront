@@ -26,11 +26,6 @@ export const createChatMessage = data =>
 export const listPageViews = () =>
     fetchList(resource.pageViews).then(response => response.json())
 
-
-
-
-
-
 // Commum methods
 const fetchList = resource =>
     fetch(`${apiUrl}/${resource}/`, {
